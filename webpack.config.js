@@ -1,7 +1,19 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 const path = require('path');
+
+function copyRevealJsFiles(pattern, outputDirectory = '') {
+    return {
+        from: `node_modules/reveal.js/${pattern}`,
+        to: outputDirectory,
+        transformPath(targetPath) {
+            return targetPath.replace('node_modules/reveal.js/', '');
+        }
+    }
+}
 
 module.exports = {
     module: {
@@ -41,18 +53,33 @@ module.exports = {
                         context: '.'
                     }
                 }
+            },
+            {
+                test: require.resolve('reveal.js'),
+                use: {
+                    loader: 'expose-loader',
+                    options: 'Reveal'
+                }
             }
         ]
     },
     plugins: [
         new UglifyJsPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
+            filename: '[name].css',
+            chunkFilename: '[id].css'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html')
-        })
+        }),
+        new CopyWebpackPlugin([
+            copyRevealJsFiles('plugin/notes/*'),
+            copyRevealJsFiles('plugin/markdown/*'),
+            copyRevealJsFiles('css/reveal.css', 'css'),
+            copyRevealJsFiles('css/theme/white.css', 'css/theme'),
+            copyRevealJsFiles('lib/font/source-sans-pro/source-sans-pro.css', 'lib/font/source-sans-pro')
+        ]),
+        new WriteFilePlugin()
     ],
     entry: {
         slides: path.resolve(__dirname, 'src', 'js', 'slides.js')
