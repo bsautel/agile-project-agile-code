@@ -15,6 +15,16 @@ function copyRevealJsFiles(pattern, outputDirectory = '') {
     }
 }
 
+function copyFiles(pattern) {
+    return {
+        from: path.join('src', pattern),
+        to: '',
+        transformPath(targetPath) {
+            return targetPath.replace('src/', '')
+        }
+    };
+}
+
 module.exports = {
     module: {
         rules: [
@@ -70,26 +80,27 @@ module.exports = {
             chunkFilename: '[id].css'
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'index.html')
+            template: path.resolve('src', 'index.html')
         }),
         new CopyWebpackPlugin([
             copyRevealJsFiles('plugin/notes/*'),
             copyRevealJsFiles('plugin/markdown/*'),
             copyRevealJsFiles('css/reveal.css', 'css'),
             copyRevealJsFiles('css/theme/white.css', 'css/theme'),
-            copyRevealJsFiles('lib/font/source-sans-pro/source-sans-pro.css', 'lib/font/source-sans-pro')
+            copyRevealJsFiles('lib/font/source-sans-pro/source-sans-pro.css', 'lib/font/source-sans-pro'),
+            copyFiles('pictures/*')
         ]),
         new WriteFilePlugin()
     ],
     entry: {
-        slides: path.resolve(__dirname, 'src', 'js', 'slides.js')
+        slides: path.resolve('src', 'js', 'slides.js')
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve('build'),
         filename: '[name].js'
     },
     devServer: {
-        contentBase: path.join(__dirname, 'build'),
+        contentBase: path.join('build'),
         compress: true,
         port: 9000
     }
