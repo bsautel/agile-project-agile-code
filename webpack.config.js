@@ -3,6 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const sharp = require('sharp');
 const path = require('path');
 
 function copyRevealJsFiles(pattern, outputDirectory = '') {
@@ -15,12 +16,25 @@ function copyRevealJsFiles(pattern, outputDirectory = '') {
     }
 }
 
-function copyFiles(pattern) {
+function copyAndResizePictures(pattern) {
     return {
         from: path.join('src', pattern),
         to: '',
         transformPath(targetPath) {
             return targetPath.replace('src/', '')
+        },
+        transform(content, path) {
+            if (path.endsWith('.jpg')) {
+                return sharp(content)
+                    .resize({
+                        width: 2000,
+                        height: 1333,
+                        fit: sharp.fit.outside
+                    })
+                    .jpeg()
+                    .toBuffer();
+            }
+            return content;
         }
     };
 }
@@ -88,7 +102,7 @@ module.exports = {
             copyRevealJsFiles('css/reveal.css', 'css'),
             copyRevealJsFiles('css/theme/white.css', 'css/theme'),
             copyRevealJsFiles('lib/font/source-sans-pro/source-sans-pro.css', 'lib/font/source-sans-pro'),
-            copyFiles('pictures/*')
+            copyAndResizePictures('pictures/*')
         ]),
         new WriteFilePlugin()
     ],
