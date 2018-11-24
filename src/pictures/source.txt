@@ -10,4 +10,5 @@ climber.jpg: https://pixabay.com/fr/escalade-de-rocher-protection-1283693/
 sign.jpg: https://pixabay.com/fr/r%C3%A9pertoire-montagnes-alpine-1495843/
 question.jpg: https://www.pexels.com/photo/analysis-blackboard-board-bubble-355952/
 building.jpg: https://www.pexels.com/photo/picture-of-eiffel-tower-338515/
-success.jpg: https://pixabay.com/fr/personne-sommet-de-la-montagne-1245959/
+goal.jpg: https://pixabay.com/fr/tir-%C3%A0-l-arc-concentration-objectif-660632/
+success.jpg: https://pixabay.com/fr/soulever-d%C3%A9fi-paysage-montagne-3338589/
