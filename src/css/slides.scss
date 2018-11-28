@@ -11,3 +11,7 @@
 .text-inverted {
   @include inverted();
 }
+
+.white {
+  color: #eee8d5;
+}
