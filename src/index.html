@@ -15,7 +15,7 @@
             <p>Benoit Sautel</p>
             <aside class="notes">
                 <ul>
-                    <li>Développeur passionné - software cratfsmanship - pisseur de code</li>
+                    <li>Développeur passionné - software cratfsmanship - en opposition à pisseur de code</li>
                     <li>Ecrire du code, c'est prendre plein de micro décisions dont certaines sont déterminantes pour
                         l'avenir du projet
                     </li>
@@ -86,23 +86,21 @@
                 </aside>
             </section>
         </section>
-        <section>
-            <section data-background-image="pictures/goal.jpg">
-                <h2>Notre code est-il adapté ?</h2>
-                <aside class="notes">
-                    <ul>
-                        <li>Qui pense prendre en compte cet enjeu en écrivant son code ?</li>
-                        <li>Qui pense réussir ?</li>
-                    </ul>
-                </aside>
-            </section>
-            <section data-background-image="pictures/question.jpg">
-                <h2>Comment faire ?</h2>
-                <aside class="notes">
-                    <p>Malheureusement pas de solution miracle</p>
-                    <p>Mais il y a plein de techniques permettant de limiter le risque.</p>
-                </aside>
-            </section>
+        <section data-background-image="pictures/goal.jpg">
+            <h2>Notre code est-il adapté à ces contraintes ?</h2>
+            <aside class="notes">
+                <ul>
+                    <li>Qui pense prendre en compte cet enjeu en écrivant son code ?</li>
+                    <li>Qui pense réussir ?</li>
+                </ul>
+            </aside>
+        </section>
+        <section data-background-image="pictures/question.jpg">
+            <h2>Comment faire ?</h2>
+            <aside class="notes">
+                <p>Malheureusement pas de solution miracle</p>
+                <p>Mais il y a plein de techniques permettant de limiter le risque.</p>
+            </aside>
         </section>
         <section>
             <section data-background-image="pictures/malleable.jpg" class="inverted">
@@ -118,39 +116,6 @@
                 </aside>
             </section>
         </section>
-        <section data-background-image="pictures/school.jpg">
-            <section>
-                <h2>Retour aux fondamentaux</h2>
-            </section>
-            <section data-background-image="pictures/building.jpg">
-                <h2>SOLID</h2>
-            </section>
-            <section data-background-image="pictures/stress.jpg">
-                <h2>Principe de responsabilité unique</h2>
-                <p>SRP - Single Responsibility Principle</p>
-                <aside class="notes">
-                    <p>Montrer un exemple de code</p>
-                </aside>
-            </section>
-            <section data-background-image="pictures/inversion.jpg">
-                <h2>Inversion des dépendances</h2>
-                <aside class="notes">
-                    <p>Montrer un exemple de code</p>
-                </aside>
-            </section>
-            <section data-background-image="pictures/climber.jpg">
-                <h2>Tester son code</h2>
-                <aside class="notes">
-                    <p>Pas seulement pour la non régression</p>
-                    <ul>
-                        <li>Efficacité au moment de l'écriture (TDD)</li>
-                        <li>Assurance sur du long terme</li>
-                    </ul>
-                    <p>Tester ça s'apprend, notamment dans la conception du code</p>
-                    <p>SOLID aide à écrire du code testable</p>
-                </aside>
-            </section>
-        </section>
         <section data-background-image="pictures/locked.jpg">
             <section>
                 <h2>Limiter le couplage</h2>
@@ -162,10 +127,64 @@
                 <h2>Découpage modulaire</h2>
             </section>
         </section>
+        <section data-background-image="pictures/school.jpg">
+            <section>
+                <h2>Retour aux fondamentaux</h2>
+            </section>
+            <section data-background-image="pictures/building.jpg">
+                <h2>SOLID</h2>
+            </section>
+            <section data-background-image="pictures/stress.jpg">
+                <h2>Principe de responsabilité unique</h2>
+                <p>SRP - Single Responsibility Principle</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Facilite le nommage</li>
+                        <li>Découpage en sous composants, chacun ayant une responsabilité</li>
+                        <li>Un même niveau d'abstraction</li>
+                        <li>Meilleure réutilisabilité</li>
+                        <li>Assemblage de plein de petit composants et non pas d'un plat de spaghetti</li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-background-image="pictures/inversion.jpg">
+                <h2>Inversion des dépendances</h2>
+                <aside class="notes">
+                    <ul>
+                        <li>Le comportement est porté par des objets</li>
+                        <li>Utilise le polymorphisme</li>
+                        <li>On dépend d'un contrat et pas d'une implémentation</li>
+                        <li>Des outils existent pour gérer l'injection automatiquement</li>
+                        <li>Augmente la réutilisabilité d'un composant</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+        <section data-background-image="pictures/climber.jpg">
+            <h2>Tester son code</h2>
+            <aside class="notes">
+                <p>Pas seulement pour la non régression</p>
+                <ul>
+                    <li>Efficacité au moment de l'écriture (TDD)</li>
+                    <li>Assurance sur du long terme</li>
+                </ul>
+                <p>Tester ça s'apprend, notamment dans la conception du code</p>
+                <p>SOLID aide à écrire du code testable</p>
+            </aside>
+        </section>
         <section data-background-image="pictures/success.jpg">
             <h2>Bonnes pratiques de conception</h2>
             <p class="white">Conseil de lecture : <em>Clean Code</em> de Robert C. Martin (Uncle Bob)</p>
             <blockquote>The only way to go fast is to go well!</blockquote>
+            <aside class="notes">
+                Elles convergent toutes vers des bonnes choses :
+                <ul>
+                    <li>Testabilité</li>
+                    <li>Lisibilité</li>
+                    <li>Vélocité</li>
+                </ul>
+                <p>Efficacité : 50k lignes de code</p>
+            </aside>
         </section>
         <section>
             <h2>Des questions ?</h2>
