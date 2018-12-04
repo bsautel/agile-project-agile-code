@@ -1,0 +1,4 @@
+rootProject.name = "agile-code-examples"
+
+include "spring-data"
+include "solid"

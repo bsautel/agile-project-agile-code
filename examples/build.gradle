@@ -1,0 +1,45 @@
+import static org.gradle.api.tasks.wrapper.Wrapper.DistributionType.ALL
+
+buildscript {
+    ext {
+        springBootVersion = "2.1.1.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+subprojects {
+    group "fr.fierdecoder"
+    version "1.0-SNAPSHOT"
+
+    apply plugin: "java"
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+
+    apply plugin: "io.spring.dependency-management"
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+
+    dependencies {
+        testCompile "junit:junit"
+        testCompile "org.assertj:assertj-core"
+    }
+}
+
+wrapper {
+    gradleVersion = "4.10.2"
+    distributionType = ALL
+}

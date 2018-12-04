@@ -99,6 +99,7 @@ module.exports = {
         new CopyWebpackPlugin([
             copyRevealJsFiles('plugin/notes/*'),
             copyRevealJsFiles('plugin/markdown/*'),
+            copyRevealJsFiles('plugin/highlight/*'),
             copyRevealJsFiles('css/reveal.css', 'css'),
             copyRevealJsFiles('css/theme/white.css', 'css/theme'),
             copyRevealJsFiles('lib/font/source-sans-pro/source-sans-pro.css', 'lib/font/source-sans-pro'),

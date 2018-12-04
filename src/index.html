@@ -30,81 +30,73 @@
                 </ul>
             </aside>
         </section>
+        <section data-background-image="pictures/unique.jpg">
+            <h2>Un cas unique dans l'industrie</h2>
+            <blockquote class="dark">
+                <ul>
+                    <li>Etude du besoin</li>
+                    <li>Conception</li>
+                    <li>Fabrication d'un prototype</li>
+                    <li>Tests</li>
+                    <li>Recette</li>
+                    <li>Production</li>
+                </ul>
+            </blockquote>
+            <aside class="notes">
+                <ul>
+                    <li>
+                        On ne voit pas bien un constructeur automobile lancer un nouveau véhicule en mode agile.
+                        Comment vendre une voiture avec seulement le chassis ?
+                    </li>
+                    <li>
+                        Monde qui bouge très vite. Ils aimeraient aussi dans l'industrie pouvoir vendre avant
+                        d'avoir terminé le développement.
+                    </li>
+                    <li>Cycle en V : hérité de ce qu'il se fait ailleurs</li>
+                    <li>Exemple avec Airbus : A350 2005 - 2014</li>
+                    <li>
+                        En 10 ans, le besoin a peut-être évolué. Mais tant pis, c'est comme ça. On ne peut pas faire
+                        autrement.
+                    </li>
+                    <li>
+                        Pourquoi ne fonctionne-t-on pas comme ça ?
+                        <ul>
+                            <li>
+                                Parce que dans l'informatique on est incapable de spécifier et de concevoir à
+                                l'avance ?
+                            </li>
+                            <li>
+                                Parce qu'on peut faire autrement !
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+        <section data-background-image="pictures/virtual.jpg">
+            <h2 class="dark">Immatériel</h2>
+            <aside class="notes">
+                <ul>
+                    <li>Conception = Fabrication</li>
+                    <li>C'est ce qui fait que c'est possible, on peut mettre à jour très facilement</li>
+                    <li>A double tranchant, l'immatériel fait aussi qu'il est plus difficile d'avoir une vision
+                        d'ensemble (dette technique)
+                    </li>
+                </ul>
+            </aside>
+        </section>
         <section data-background-image="pictures/agile.jpg">
             <h2>Vous avez dit agile ?</h2>
             <blockquote class="light">Itérer - Essayer - Ajuster - Rectifier - Renoncer</blockquote>
             <aside class="notes">
-                <ul>
-                    <li>Itérer</li>
-                    <li>Essayer</li>
-                    <li>Rectifier</li>
-                    <li>Ajuster</li>
-                    <li>Renoncer</li>
-                </ul>
                 <p>Commencer à construire un produit dont on a aucune idée de ce à quoi il ressemblera à la fin</p>
             </aside>
-        </section>
-        <section>
-            <section data-background-image="pictures/unique.jpg">
-                <h2>Un cas unique dans l'industrie</h2>
-                <blockquote class="dark">
-                    <ul>
-                        <li>Etude du besoin</li>
-                        <li>Conception</li>
-                        <li>Fabrication d'un prototype</li>
-                        <li>Tests</li>
-                        <li>Recette</li>
-                        <li>Production</li>
-                    </ul>
-                </blockquote>
-                <aside class="notes">
-                    <ul>
-                        <li>
-                            On ne voit pas bien un constructeur automobile lancer un nouveau véhicule en mode agile.
-                            Comment vendre une voiture avec seulement le chassis ?
-                        </li>
-                        <li>
-                            Monde qui bouge très vite. Ils aimeraient aussi dans l'industrie pouvoir vendre avant
-                            d'avoir terminé le développement.
-                        </li>
-                        <li>Cycle en V : hérité de ce qu'il se fait ailleurs</li>
-                        <li>Exemple avec Airbus : A350 2005 - 2014</li>
-                        <li>
-                            En 10 ans, le besoin a peut-être évolué. Mais tant pis, c'est comme ça. On ne peut pas faire
-                            autrement.
-                        </li>
-                        <li>
-                            Pourquoi ne fonctionne-t-on pas comme ça ?
-                            <ul>
-                                <li>
-                                    Parce que dans l'informatique on est incapable de spécifier et de concevoir à
-                                    l'avance ?
-                                </li>
-                                <li>
-                                    Parce qu'on peut faire autrement !
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </aside>
-            </section>
-            <section data-background-image="pictures/virtual.jpg">
-                <h2 class="dark">Immatériel</h2>
-                <aside class="notes">
-                    <ul>
-                        <li>Conception = Fabrication</li>
-                        <li>C'est ce qui fait que c'est possible, on peut mettre à jour très facilement</li>
-                        <li>A double tranchant, l'immatériel fait aussi qu'il est plus difficile d'avoir une vision
-                            d'ensemble (dette technique)
-                        </li>
-                    </ul>
-                </aside>
-            </section>
         </section>
         <section data-background-image="pictures/goal.jpg">
             <h2>Notre code est-il adapté à ces contraintes ?</h2>
             <aside class="notes">
                 <ul>
+                    <li>Qui est développeur ?</li>
                     <li>Qui pense prendre en compte cet enjeu en écrivant son code ?</li>
                     <li>Qui pense réussir ?</li>
                 </ul>
@@ -128,39 +120,240 @@
             </aside>
         </section>
         <section data-background-image="pictures/locked.jpg">
+            <h2>Limiter le couplage</h2>
+            <aside class="notes">
+                Mesure le degré de dépendance d'un composant envers des composants tiers.
+                A différents niveaux de granularité.
+            </aside>
+        </section>
+        <section data-background-image="pictures/abstraction.jpg">
             <section>
-                <h2>Limiter le couplage</h2>
-            </section>
-            <section data-background-image="pictures/abstraction.jpg">
                 <h2 class="dark">Abstraire quand c'est pertinent</h2>
             </section>
-            <section data-background-image="pictures/modules.jpg">
-                <h2 class="dark">Découpage modulaire</h2>
+            <section>
+                <pre><code>
+public interface UsersRepository
+        extends MongoRepository&lt;User, UUID&gt; {
+    Optional&lt;User&gt; findById(UUID id);
+
+    User save(User user);
+
+    List&lt;User&gt; findByEmailAddress(String mailAddress);
+}
+               </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class User {
+    @Id
+    private final UUID id;
+    private final String firstName;
+    private final String lastName;
+    @Indexed
+    private final String emailAddress;
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class MongoDbUser {
+    @Id
+    private final UUID id;
+    private final String firstName;
+    private final String lastName;
+    @Indexed
+    private final String emailAddress;
+
+    public User toUser() {
+        return new User(id, firstName, lastName, emailAddress);
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public interface MongoDbUsersRepository
+        extends MongoRepository&lt;MongoDbUser, UUID&gt; {
+    Optional&lt;MongoDbUser&gt; findById(UUID id);
+
+    MongoDbUser save(MongoDbUser user);
+
+    List&lt;MongoDbUser&gt; findByEmailAddress(String mailAddress);
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class User {
+    private final UUID id;
+    private final String firstName;
+    private final String lastName;
+    private final String emailAddress;
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class UsersRepository {
+    private final MongoDbUsersRepository mongoDbUsersRepository;
+
+    public UsersRepository(MongoDbUsersRepository mongoDbUsersRepository) {
+        this.mongoDbUsersRepository = mongoDbUsersRepository;
+    }
+
+    public List&lt;User&gt; findByEmailAddress(String emailAddress) {
+        return mongoDbUsersRepository.findByEmailAddress(emailAddress)
+                .stream()
+                .map(MongoDbUser::toUser)
+                .collect(toList());
+    }
+}
+                </code></pre>
             </section>
         </section>
+        <section data-background-image="pictures/modules.jpg">
+            <h2 class="dark">Découpage modulaire</h2>
+        </section>
         <section data-background-image="pictures/school.jpg">
+            <h2>Retour aux fondamentaux</h2>
+        </section>
+        <section data-background-image="pictures/building.jpg">
+            <h2>SOLID</h2>
+        </section>
+        <section data-background-image="pictures/multi-tool.jpg">
             <section>
-                <h2>Retour aux fondamentaux</h2>
-            </section>
-            <section data-background-image="pictures/building.jpg">
-                <h2>SOLID</h2>
-            </section>
-            <section data-background-image="pictures/multi-tool.jpg">
                 <h2>Principe de responsabilité unique</h2>
                 <p>SRP - Single Responsibility Principle</p>
                 <aside class="notes">
                     <ul>
                         <li>Une structure de données n'a pas de comportement (c'est pas sa responsabilité)</li>
                         <li>Une classe a une seule raison de changer</li>
-                        <li>Facilite le nommage</li>
-                        <li>Découpage en sous composants, chacun ayant une responsabilité</li>
-                        <li>Un même niveau d'abstraction</li>
-                        <li>Meilleure réutilisabilité</li>
-                        <li>Assemblage de plein de petit composants et non pas d'un plat de spaghetti</li>
                     </ul>
                 </aside>
             </section>
-            <section data-background-image="pictures/inversion.jpg">
+            <section>
+                <pre><code>
+public class User {
+    private final UUID id;
+    private final String firstName;
+    private final String lastName;
+    private final String emailAddress;
+
+    public String toJson() {
+        return "{\"id\":\"" + id + "\",[...]}";
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class User {
+    private final UUID id;
+    private final String firstName;
+    private final String lastName;
+    private final String emailAddress;
+}
+
+public class UserJsonSerializer {
+    public static String serializeToJson(User user) {
+        return "{\"id\":\"" + user.getId() + "\",[...]}";
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+4ffb288d-6444-49f1-bc50-c9c7ac772757;Bob;Martin;bob@cleancode.com
+18705afe-f896-46b6-b157-6b33a3efb189;Alice;Martin;alice@badcode.com
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class UsersReader {
+    public List&lt;User&gt; readUsers(Path usersFilePath)
+            throws IOException {
+        byte[] binaryFileContents = Files.readAllBytes(usersFilePath);
+        String fileContents = new String(binaryFileContents, UTF_8);
+        return Stream.of(fileContents.split("\n"))
+                .map(line -> {
+                    String[] lineParts = line.split(";");
+                    return new User(UUID.fromString(lineParts[0]),
+                        lineParts[1], lineParts[2], lineParts[3]);
+                })
+                .collect(toList());
+    }
+}
+                </code></pre>
+                <aside class="notes">
+                    <p>Différents niveaux d'abstraction</p>
+                </aside>
+            </section>
+            <section>
+                <pre><code>
+public class FileContentsReader {
+    public String readFile(Path filePath) throws IOException {
+        byte[] binaryFileContents = Files.readAllBytes(filePath);
+        return new String(binaryFileContents, UTF_8);
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class StringLinesReader {
+    public String[] readLines(String value) {
+        return value.split("\n");
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class UserLineReader {
+    public User readUser(String line) {
+        String[] lineParts = line.split(";");
+        return new User(UUID.fromString(lineParts[0]), lineParts[1], lineParts[2], lineParts[3]);
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <pre><code>
+public class UsersReader {
+    private final FileContentsReader fileContentsReader =
+            new FileContentsReader();
+    private final StringLinesReader stringLinesReader =
+            new StringLinesReader();
+    private final UserLineReader userLineReader =
+            new UserLineReader();
+
+    public List&lt;User&gt; readUsers(Path usersFilePath)
+            throws IOException {
+        String fileContents =
+                fileContentsReader.readFile(usersFilePath);
+        String[] lines =
+                stringLinesReader.readLines(fileContents);
+        return Stream.of(lines)
+                .map(userLineReader::readUser)
+                .collect(toList());
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <h2>On gagne sur beaucoup de terrains</h2>
+                <aside class="notes">
+                    <ul>
+                        <li>Facilite le nommage</li>
+                        <li>Meilleure réutilisabilité</li>
+                        <li>Assemblage de plein de petit composants et non pas d'un plat de spaghetti</li>
+                        <li>Testabilité</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+        <section data-background-image="pictures/inversion.jpg">
+            <section>
                 <h2>Inversion des dépendances</h2>
                 <aside class="notes">
                     <ul>
@@ -172,33 +365,85 @@
                     </ul>
                 </aside>
             </section>
+            <section>
+                <pre><code>
+public class UsersReader {
+    private final FileContentsReader fileContentsReader;
+    private final StringLinesReader stringLinesReader;
+    private final UserLineReader userLineReader;
+
+    public UsersReader(FileContentsReader fileContentsReader,
+                    StringLinesReader stringLinesReader,
+                    UserLineReader userLineReader) {
+        this.fileContentsReader = fileContentsReader;
+        this.stringLinesReader = stringLinesReader;
+        this.userLineReader = userLineReader;
+    }
+
+    public List&lt;User&gt; readUsers(Path usersFilePath)
+                    throws IOException {
+        String fileContents =
+                fileContentsReader.readFile(usersFilePath);
+        String[] lines =
+                stringLinesReader.readLines(fileContents);
+        return Stream.of(lines)
+                .map(userLineReader::readUser)
+                .collect(toList());
+    }
+}
+                </code></pre>
+            </section>
+            <section>
+                <h2>Automatiser l'injection de dépendances</h2>
+            </section>
         </section>
         <section data-background-image="pictures/climber.jpg">
-            <h2>Tester son code</h2>
-            <aside class="notes">
-                <p>Pas seulement pour la non régression</p>
-                <ul>
-                    <li>Efficacité au moment de l'écriture (TDD)</li>
-                    <li>Assurance sur du long terme</li>
-                </ul>
-                <p>Tester ça s'apprend, notamment dans la conception du code</p>
-                <p>SOLID aide à écrire du code testable</p>
-            </aside>
+            <section>
+                <h2>Tester son code</h2>
+            </section>
+            <section>
+                <h2>Tests de non régression</h2>
+            </section>
+            <section>
+                <h2>Gain d'efficacité au moment de l'écriture du code</h2>
+            </section>
+            <section>
+                <h2>Tester ça s'apprend</h2>
+                <aside class="notes">
+                    <ul>
+                        <li>Conception du code</li>
+                        <li>Solid</li>
+                        <li>TDD</li>
+                    </ul>
+                </aside>
+            </section>
         </section>
         <section data-background-image="pictures/success.jpg">
-            <h2>Bonnes pratiques de conception</h2>
-            <p class="light">Conseil de lecture : <em>Clean Code</em> de Robert C. Martin (Uncle Bob)</p>
-            <blockquote>The only way to go fast is to go well!</blockquote>
-            <aside class="notes">
-                Elles convergent toutes vers des bonnes choses :
-                <ul>
-                    <li>Testabilité</li>
-                    <li>Lisibilité</li>
-                    <li>Vélocité</li>
-                </ul>
-                <p>Efficacité : 50k lignes de code</p>
-                <p>Uncle Bob a participé à l'élaboration du manifeste agile</p>
-            </aside>
+            <section>
+                <h2>Bonnes pratiques de conception</h2>
+                <aside class="notes">
+                    Elles convergent toutes vers des bonnes choses :
+                    <ul>
+                        <li>Testabilité</li>
+                        <li>Lisibilité</li>
+                        <li>Vélocité</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h2>Retour d'expérience</h2>
+                <aside class="notes">
+                    <p>Efficacité : 50k lignes de code</p>
+                </aside>
+            </section>
+            <section>
+                <h2>Conseil de lecture</h2>
+                <p class="light"><em>Clean Code</em> de Robert C. Martin (Uncle Bob)</p>
+                <blockquote>The only way to go fast is to go well!</blockquote>
+                <aside class="notes">
+                    <p>Uncle Bob a participé à l'élaboration du manifeste agile</p>
+                </aside>
+            </section>
         </section>
         <section>
             <h2>Des questions ?</h2>

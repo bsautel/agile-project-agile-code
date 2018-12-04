@@ -1,0 +1,2 @@
+4ffb288d-6444-49f1-bc50-c9c7ac772757;Bob;Martin;bob@cleancode.com
+18705afe-f896-46b6-b157-6b33a3efb189;Alice;Martin;alice@badcode.com
