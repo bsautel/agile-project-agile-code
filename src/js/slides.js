@@ -9,5 +9,7 @@ Reveal.initialize({
     dependencies: [
         {src: 'plugin/notes/notes.js', async: true}
     ],
-    history: true
+    history: true,
+    controls: false,
+    progress: false
 });

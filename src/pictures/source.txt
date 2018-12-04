@@ -1,12 +1,10 @@
 agile.jpg: https://www.pexels.com/photo/woman-doing-yoga-37351/
 school.jpg: https://pixabay.com/fr/crayon-aff%C3%BBteuse-ordinateur-portable-918449/
-stress.jpg: https://www.pexels.com/photo/design-desk-display-eyewear-313690/
 craftsman.jpg: https://www.pexels.com/photo/background-blank-business-craft-301703/
 unique.jpg: https://www.pexels.com/photo/eggs-in-tray-on-white-surface-1556707/
 virtual.jpg: https://www.pexels.com/photo/man-in-grey-dress-shirt-using-brown-cardboard-vr-glasses-936575/
 locked.jpg: https://pixabay.com/fr/cadenas-verrouillage-cha%C3%AEne-porte-474089/
 climber.jpg: https://pixabay.com/fr/escalade-de-rocher-protection-1283693/
-sign.jpg: https://pixabay.com/fr/r%C3%A9pertoire-montagnes-alpine-1495843/
 question.jpg: https://www.pexels.com/photo/analysis-blackboard-board-bubble-355952/
 building.jpg: https://www.pexels.com/photo/picture-of-eiffel-tower-338515/
 goal.jpg: https://pixabay.com/fr/tir-%C3%A0-l-arc-concentration-objectif-660632/
@@ -15,3 +13,4 @@ malleable.jpg: https://pixabay.com/fr/poterie-main-coupe-vase-mains-1139047/
 modules.jpg: https://pixabay.com/fr/broches-pr%C3%A9paration-nulle-beurre-164339/
 abstraction.jpg: https://pixabay.com/fr/grass-prairie-or-ros%C3%A9e-3375344/
 inversion.jpg : https://pixabay.com/fr/l-homme-rock-%C3%A0-l-envers-ab%C3%AEme-2047269/
+multi-tool.jpg: https://pixabay.com/fr/saber-couteau-3771701/

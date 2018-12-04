@@ -2,16 +2,14 @@
   filter: invert(100%);
 }
 
-.inverted {
-  h1, h2, h3, h4, h5, h6, p, ul, ol {
-    @include inverted();
-  }
-}
-
 .text-inverted {
   @include inverted();
 }
 
-.white {
+.light {
   color: #eee8d5;
+}
+
+.dark {
+  color: #222 !important;
 }
