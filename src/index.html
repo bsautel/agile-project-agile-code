@@ -44,31 +44,16 @@
             </blockquote>
             <aside class="notes">
                 <ul>
-                    <li>
-                        On ne voit pas bien un constructeur automobile lancer un nouveau véhicule en mode agile.
-                        Comment vendre une voiture avec seulement le chassis ?
-                    </li>
-                    <li>
-                        Monde qui bouge très vite. Ils aimeraient aussi dans l'industrie pouvoir vendre avant
-                        d'avoir terminé le développement.
-                    </li>
                     <li>Cycle en V : hérité de ce qu'il se fait ailleurs</li>
                     <li>Exemple avec Airbus : A350 2005 - 2014</li>
                     <li>
-                        En 10 ans, le besoin a peut-être évolué. Mais tant pis, c'est comme ça. On ne peut pas faire
-                        autrement.
+                        En 10 ans, le besoin a peut-être évolué.
                     </li>
                     <li>
-                        Pourquoi ne fonctionne-t-on pas comme ça ?
-                        <ul>
-                            <li>
-                                Parce que dans l'informatique on est incapable de spécifier et de concevoir à
-                                l'avance ?
-                            </li>
-                            <li>
-                                Parce qu'on peut faire autrement !
-                            </li>
-                        </ul>
+                        Ils aimeraient commencer à vendre l'avion sans les moteurs, mais ça n'a pas de sens.
+                    </li>
+                    <li>
+                        Nous on peut faire autrement et on le fait, grâce à...
                     </li>
                 </ul>
             </aside>
@@ -87,7 +72,15 @@
         </section>
         <section data-background-image="pictures/agile.jpg">
             <h2>Vous avez dit agile ?</h2>
-            <blockquote class="light">Itérer - Essayer - Ajuster - Rectifier - Renoncer</blockquote>
+            <blockquote class="light">
+                <ul>
+                    <li>Itérer</li>
+                    <li>Essayer</li>
+                    <li>Ajuster</li>
+                    <li>Rectifier</li>
+                    <li>Renoncer</li>
+                </ul>
+            </blockquote>
             <aside class="notes">
                 <p>Commencer à construire un produit dont on a aucune idée de ce à quoi il ressemblera à la fin</p>
             </aside>
@@ -95,6 +88,7 @@
         <section data-background-image="pictures/goal.jpg">
             <h2>Notre code est-il adapté à ces contraintes ?</h2>
             <aside class="notes">
+                <p>Questions</p>
                 <ul>
                     <li>Qui est développeur ?</li>
                     <li>Qui pense prendre en compte cet enjeu en écrivant son code ?</li>
@@ -138,7 +132,7 @@ public interface UsersRepository
 
     User save(User user);
 
-    List&lt;User&gt; findByEmailAddress(String mailAddress);
+    List&lt;User&gt; findByEmailAddress(String emailAddress);
 }
                </code></pre>
             </section>
@@ -178,7 +172,7 @@ public interface MongoDbUsersRepository
 
     MongoDbUser save(MongoDbUser user);
 
-    List&lt;MongoDbUser&gt; findByEmailAddress(String mailAddress);
+    List&lt;MongoDbUser&gt; findByEmailAddress(String emailAddress);
 }
                 </code></pre>
             </section>
@@ -213,12 +207,23 @@ public class UsersRepository {
         </section>
         <section data-background-image="pictures/modules.jpg">
             <h2 class="dark">Découpage modulaire</h2>
+            <aside class="notes">
+                <ul>
+                    <li>Unités de compilation -> frontière</li>
+                    <li>Modules techniques</li>
+                    <li>Modules fonctionnels</li>
+                    <li>Exemple e-commerce : clients / produits / factures</li>
+                </ul>
+            </aside>
         </section>
         <section data-background-image="pictures/school.jpg">
             <h2>Retour aux fondamentaux</h2>
         </section>
         <section data-background-image="pictures/building.jpg">
             <h2>SOLID</h2>
+            <aside class="notes">
+                <p>Début des années 2000</p>
+            </aside>
         </section>
         <section data-background-image="pictures/multi-tool.jpg">
             <section>
@@ -226,6 +231,7 @@ public class UsersRepository {
                 <p>SRP - Single Responsibility Principle</p>
                 <aside class="notes">
                     <ul>
+                        <li>Class / méthode / fonction</li>
                         <li>Une structure de données n'a pas de comportement (c'est pas sa responsabilité)</li>
                         <li>Une classe a une seule raison de changer</li>
                     </ul>
@@ -312,7 +318,8 @@ public class StringLinesReader {
 public class UserLineReader {
     public User readUser(String line) {
         String[] lineParts = line.split(";");
-        return new User(UUID.fromString(lineParts[0]), lineParts[1], lineParts[2], lineParts[3]);
+        return new User(UUID.fromString(lineParts[0]),
+                    lineParts[1], lineParts[2], lineParts[3]);
     }
 }
                 </code></pre>
@@ -345,9 +352,10 @@ public class UsersReader {
                 <aside class="notes">
                     <ul>
                         <li>Facilite le nommage</li>
+                        <li>Plus lisible</li>
                         <li>Meilleure réutilisabilité</li>
                         <li>Assemblage de plein de petit composants et non pas d'un plat de spaghetti</li>
-                        <li>Testabilité</li>
+                        <li>Testabilité mais on peut encore progresser et on va voir ça avec le D</li>
                     </ul>
                 </aside>
             </section>
@@ -357,10 +365,7 @@ public class UsersReader {
                 <h2>Inversion des dépendances</h2>
                 <aside class="notes">
                     <ul>
-                        <li>Le comportement est porté par des objets</li>
-                        <li>Utilise le polymorphisme</li>
                         <li>On dépend d'un contrat et pas d'une implémentation</li>
-                        <li>Des outils existent pour gérer l'injection automatiquement</li>
                         <li>Augmente la réutilisabilité d'un composant</li>
                     </ul>
                 </aside>
@@ -394,23 +399,34 @@ public class UsersReader {
                 </code></pre>
             </section>
             <section>
-                <h2>Automatiser l'injection de dépendances</h2>
+                <h2>Automatiser</h2>
+                <aside class="notes">
+                    <p>Injection de dépendance</p>
+                    <p>On a gagné en réutilisabilité (moins dépendant du contexte), et aussi en testabilité.</p>
+                </aside>
             </section>
         </section>
         <section data-background-image="pictures/climber.jpg">
             <section>
                 <h2>Tester son code</h2>
+                <aside class="notes">
+                    <p>Parallèle avec l'escalade</p>
+                </aside>
             </section>
             <section>
                 <h2>Tests de non régression</h2>
             </section>
             <section>
-                <h2>Gain d'efficacité au moment de l'écriture du code</h2>
+                <h2>Gain d'efficacité</h2>
+                <aside class="notes">
+                    <p>Automatisation des tests, plus rapide et on évite le travail peu intéressant.</p>
+                </aside>
             </section>
             <section>
                 <h2>Tester ça s'apprend</h2>
                 <aside class="notes">
                     <ul>
+                        <li>Ecriture des tests</li>
                         <li>Conception du code</li>
                         <li>Solid</li>
                         <li>TDD</li>
@@ -422,12 +438,20 @@ public class UsersReader {
             <section>
                 <h2>Bonnes pratiques de conception</h2>
                 <aside class="notes">
-                    Elles convergent toutes vers des bonnes choses :
+                    <p>Elles convergent toutes vers des bonnes choses :</p>
                     <ul>
                         <li>Testabilité</li>
                         <li>Lisibilité</li>
-                        <li>Vélocité</li>
+                        <li>Evolutif</li>
+                        <li>Réutilisable</li>
                     </ul>
+                </aside>
+            </section>
+            <section>
+                <h2>Vélocité constante</h2>
+                <aside class="notes">
+                    <p>Ca prend du temps au début mais après on le rattrape sans problème</p>
+                    <p>Intérêts court terme != intérêts long terme</p>
                 </aside>
             </section>
             <section>
@@ -441,7 +465,9 @@ public class UsersReader {
                 <p class="light"><em>Clean Code</em> de Robert C. Martin (Uncle Bob)</p>
                 <blockquote>The only way to go fast is to go well!</blockquote>
                 <aside class="notes">
+                    <p>Développeur qui a 50 ans d'expérience</p>
                     <p>Uncle Bob a participé à l'élaboration du manifeste agile</p>
+                    <p>Il a aussi défini SOLID</p>
                 </aside>
             </section>
         </section>
