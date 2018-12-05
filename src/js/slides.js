@@ -22,5 +22,6 @@ Reveal.initialize({
     ],
     history: true,
     controls: false,
-    progress: false
+    progress: false,
+    slideNumber: true
 });
